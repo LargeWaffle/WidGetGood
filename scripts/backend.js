@@ -1,9 +1,19 @@
 
 const { dialog } = require('electron')
+const path = require('path');
 
 module.exports = function localImport(){
 
-    const selectedPaths = dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] });
+    // transforme un chemin relatif en absolu
+    const importDirectoryPath = path.resolve( "../WidGetGood/resources/")
+
+    const selectedPaths = dialog.showOpenDialogSync({
+        title: 'Importation de dictionnaires',
+        defaultPath: importDirectoryPath,
+        buttonLabel: 'Importer',
+        filters: [{name: 'Fichiers personnalisés', extensions: ['csv']}],
+        properties: ['openFile', 'multiSelections'] });
+
     console.log(selectedPaths);
 
 }
