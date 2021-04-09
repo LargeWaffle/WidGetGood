@@ -1,9 +1,10 @@
-window.$ = window.jQuery = require('jquery');
 
 const { dialog } = require('electron')
 
-function localImport(){
+module.exports = function localImport(){
 
-    console.log(dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] }))
+    const selectedPaths = dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] });
+    console.log(selectedPaths);
 
 }
+
