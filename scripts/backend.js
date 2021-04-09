@@ -7,6 +7,7 @@ module.exports = function localImport(){
     // transforme un chemin relatif en absolu
     const importDirectoryPath = path.resolve( "../WidGetGood/resources/")
 
+    // TODO: fonction pour doc & docx
     const selectedPaths = dialog.showOpenDialogSync({
         title: 'Importation de dictionnaires',
         defaultPath: importDirectoryPath,
