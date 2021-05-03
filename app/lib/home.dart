@@ -23,16 +23,48 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: RichText(
+              text: TextSpan(
+                text:'WidGet',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                ),
+                children: [
+                  TextSpan(
+                    text: 'Good',
+                    style: TextStyle(
+                      color: Color.fromRGBO(4, 17, 30, 1),
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
+              )
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: PageStorage(
         child: currentScreen,
         bucket: bucket,
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromRGBO(4, 17, 30, 1),
         child: Icon(
-            Icons.play_circle_filled_rounded,
+            Icons.play_arrow_rounded,
+          size: 40,
+          color: Colors.white,
         ),
 
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            currentScreen = Play();
+            currentTab = 1;
+          });
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(

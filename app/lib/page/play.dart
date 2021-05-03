@@ -9,7 +9,6 @@ class _PlayState extends State<Play> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Play')),
       body: Center(
         child: Text('Play Screen', style: TextStyle(fontSize:40)),
       ),
