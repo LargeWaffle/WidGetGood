@@ -24,6 +24,7 @@ class _DicoState extends State<Dico> {
             bottom: TabBar(
               unselectedLabelColor: Colors.white,
               labelColor: Colors.white,
+              labelStyle: TextStyle(fontSize: 20),
               tabs: [
                 Tab(text: 'Importer'),
                 Tab(text: 'Gérer'),
@@ -37,14 +38,14 @@ class _DicoState extends State<Dico> {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 32,
                     ),
                     children: [
                       TextSpan(
                         text: 'Good',
                         style: TextStyle(
                           color: Color.fromRGBO(4, 17, 30, 1),
-                          fontSize: 24,
+                          fontSize: 32,
                         ),
                       ),
                     ],
