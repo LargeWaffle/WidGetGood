@@ -1,7 +1,8 @@
+import 'package:app/home.dart';
 import 'package:app/page/dictionnaries.dart';
 import 'package:app/page/play.dart';
-import 'package:flutter/material.dart';
 import 'package:app/page/stats.dart';
+import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -11,35 +12,54 @@ class Dashboard extends StatefulWidget {
 class _Dashboard extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
-    return Scaffold(
-      appBar: AppBar(title: Text('Dashboard')),
-      body: Center(
-        child: Text('Dashboard Screen', style: TextStyle(fontSize:40)),
-=======
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xFFF2994A),
+        accentColor: Colors.white,
+      ),
       home: DefaultTabController(
-        length: 3,
+        length: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color(0xFFF2994A),
             bottom: TabBar(
+              unselectedLabelColor: Colors.white,
+              labelColor: Colors.white,
               tabs: [
-                Tab(text: 'Dictionnaries'),
+                Tab(text: 'Dashboard'),
                 Tab(text: 'Stats',),
-                Tab(text: 'Play'),
               ],
             ),
+            title: Center(
+              child: RichText(
+                  text: TextSpan(
+                    text:'WidGet',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Good',
+                        style: TextStyle(
+                          color: Color.fromRGBO(4, 17, 30, 1),
+                          fontSize: 24,
+                        ),
+                      ),
+                    ],
+                  )
+              ),
+            ),
+            centerTitle: true,
           ),
           body: TabBarView(
             children: [
-              Dico(),
+              Play(),
               Stats(),
-              Play()
             ],
           ),
         ),
->>>>>>> Stashed changes
       ),
     );
   }
