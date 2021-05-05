@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Stats extends StatefulWidget {
   @override
-  _Stats createState() => _Stats();
+  _StatsState createState() => _StatsState();
 }
 
-class _Stats extends State<Stats> {
+class _StatsState extends State<Stats> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
