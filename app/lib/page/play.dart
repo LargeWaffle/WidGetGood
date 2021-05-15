@@ -8,6 +8,7 @@ class Play extends StatefulWidget {
 
 class _PlayState extends State<Play> {
   List _lang = ["Japonais", "Anglais", "Chinois", "Italien"];
+  bool playModeSwitched = false;
 
   List<DropdownMenuItem<String>> _dropDownMenuItems =
       List<DropdownMenuItem<String>>.empty(growable: true);
@@ -69,8 +70,8 @@ class _PlayState extends State<Play> {
                 ),
               ),
 
-        ),Container(padding: EdgeInsets.all(15.0))
-        ,new Container(
+        ),Container(padding: EdgeInsets.all(10.0)),
+        new Container(
               width: MediaQuery.of(context).size.width - 25,
               padding: EdgeInsets.only(left: 16.0, right: 16.0),
               decoration: BoxDecoration(
@@ -103,11 +104,52 @@ class _PlayState extends State<Play> {
                   ),
                 ),
               ),
+            ),Container(padding: EdgeInsets.all(10.0)),
+            new Container(
+              width: MediaQuery.of(context).size.width - 25,
+              padding: EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10), //border corner radius
+                boxShadow:[
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.3), //color of shadow
+                    spreadRadius: 0, //spread radius
+                    blurRadius: 15, // blur radius
+                    offset: Offset(0, 2), // changes position of shadow
+                    //first paramerter of offset is left-right
+                    //second parameter is top to down
+                  ),
+                  //you can set more BoxShadow() here
+                ],
+              ),
+              child: Column(
+                children: [
+                  Text("Mode de jeu", style: TextStyle(fontSize: 30,), textAlign: TextAlign.center),
+                  Container(padding: EdgeInsets.all(10.0)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [Text("Temps"),
+                      Switch(value: playModeSwitched, onChanged: (value) {
+                        setState(() {
+                        playModeSwitched = value;
+                        });
+                        },
+                      activeColor: Colors.indigo),
+                    Text("Mots")],
+                  )
+                ],
+              ),
             ),
           ],
         ));
   }
 
+  void togglePlayMode(bool playModeSwitched){
+    setState(() {
+      playModeSwitched = !playModeSwitched;
+    });
+  }
   void changedDropDownItem(String? selectedCity) {
     setState(() {
       _currentLang = selectedCity!;
