@@ -1,5 +1,3 @@
-import 'package:app/home.dart';
-import 'package:app/page/dictionnaries.dart';
 import 'package:app/page/play.dart';
 import 'package:app/page/stats.dart';
 import 'package:flutter/material.dart';
