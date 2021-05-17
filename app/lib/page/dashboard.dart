@@ -1,4 +1,4 @@
-import 'package:app/page/play.dart';
+import 'package:app/page/dash.dart';
 import 'package:app/page/stats.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +52,7 @@ class _Dashboard extends State<Dashboard> {
           ),
           body: TabBarView(
             children: [
-              Play(),
+              Dash(),
               Stats(),
             ],
           ),

@@ -57,10 +57,12 @@ class _HomeState extends State<Home> {
                   MaterialButton(
                     minWidth: 40,
                     onPressed: () {
-                      setState(() {
-                        currentScreen = Dashboard();
-                        currentTab = 0;
-                      });
+                      if (currentScreen != Dashboard()) {
+                        setState(() {
+                          currentScreen = Dashboard();
+                          currentTab = 0;
+                        });
+                      }
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

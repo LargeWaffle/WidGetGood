@@ -45,6 +45,19 @@ class MyStatelessWidget extends StatelessWidget {
     "Plantes"
   ];
 
+  List flags = [
+    "241-japan.png",
+    "197-france.png",
+    "110-united kingdom.png",
+    "230-spain.png",
+    "208-germany.png",
+    "165-poland.png",
+    "154-turkey.png",
+    "204-saudi arabia.png",
+    "263-italy.png",
+    "176-switzerland.png"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,9 +98,7 @@ class MyStatelessWidget extends StatelessWidget {
                                       child: CircleAvatar(
                                         backgroundColor: Colors.green,
                                         foregroundColor: Colors.green,
-                                        backgroundImage: NetworkImage
-                                          (
-                                            "https://img-premium.flaticon.com/png/512/197/197604.png?token=exp=1621072087~hmac=914f482645a05843048c3727c93459bc"),
+                                        backgroundImage: AssetImage('assets/images/'+flags[index])
                                       )
                                   ),
                                   SizedBox(width: 10.0),
