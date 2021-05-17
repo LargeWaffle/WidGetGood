@@ -22,6 +22,7 @@ class _Dashboard extends State<Dashboard> {
             bottom: TabBar(
               unselectedLabelColor: Colors.white,
               labelColor: Colors.white,
+              labelStyle: TextStyle(fontSize: 20),
               tabs: [
                 Tab(text: 'Dashboard'),
                 Tab(text: 'Stats',),
@@ -34,14 +35,14 @@ class _Dashboard extends State<Dashboard> {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 32,
                     ),
                     children: [
                       TextSpan(
                         text: 'Good',
                         style: TextStyle(
                           color: Color.fromRGBO(4, 17, 30, 1),
-                          fontSize: 24,
+                          fontSize: 32,
                         ),
                       ),
                     ],
