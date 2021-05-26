@@ -6,6 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WidGetGood',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xFFF2994A),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Home(),

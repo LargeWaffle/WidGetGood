@@ -28,11 +28,19 @@ class _HomeState extends State<Home> {
         bucket: bucket,
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromRGBO(4, 17, 30, 1),
         child: Icon(
-            Icons.play_circle_filled_rounded,
+            Icons.play_arrow_rounded,
+          size: 40,
+          color: Colors.white,
         ),
 
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            currentScreen = Play();
+            currentTab = 1;
+          });
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -49,10 +57,12 @@ class _HomeState extends State<Home> {
                   MaterialButton(
                     minWidth: 40,
                     onPressed: () {
-                      setState(() {
-                        currentScreen = Dashboard();
-                        currentTab = 0;
-                      });
+                      if (currentScreen != Dashboard()) {
+                        setState(() {
+                          currentScreen = Dashboard();
+                          currentTab = 0;
+                        });
+                      }
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
