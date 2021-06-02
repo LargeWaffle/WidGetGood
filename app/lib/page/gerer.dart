@@ -20,7 +20,7 @@ class _GererState extends State<Gerer> {
 
 /// This is the stateless widget that the main application instantiates.
 class MyStatelessWidget extends StatelessWidget {
-  List languages = [
+  final List languages = [
     "Japonais",
     "Français",
     "Anglais",
@@ -32,7 +32,7 @@ class MyStatelessWidget extends StatelessWidget {
     "Italien",
     "Suisse"
   ];
-  List categories = [
+  final List categories = [
     "Nourriture",
     "Objets",
     "Outils",
@@ -45,7 +45,7 @@ class MyStatelessWidget extends StatelessWidget {
     "Plantes"
   ];
 
-  List flags = [
+  final List flags = [
     "241-japan.png",
     "197-france.png",
     "110-united kingdom.png",
