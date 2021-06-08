@@ -11,6 +11,7 @@ class _Dashboard extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xFFF2994A),
         accentColor: Colors.white,
@@ -24,7 +25,7 @@ class _Dashboard extends State<Dashboard> {
               labelColor: Colors.white,
               labelStyle: TextStyle(fontSize: 20),
               tabs: [
-                Tab(text: 'Dashboard'),
+                Tab(text: 'Dashboard',),
                 Tab(text: 'Stats',),
               ],
             ),
