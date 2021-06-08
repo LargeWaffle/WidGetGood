@@ -132,7 +132,14 @@ class MyStatelessWidget extends StatelessWidget {
                                       IconButton(
                                         icon: Icon(
                                             Icons.delete_outline_rounded),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          print(index);
+                                          languages.removeAt(index);
+                                          flags.removeAt(index);
+                                          categories.removeAt(index);
+                                          print(languages);
+                                          Gerer();
+                                        },
                                         color: Colors.red
                                       )
                                     ]
