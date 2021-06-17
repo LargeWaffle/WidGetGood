@@ -10,6 +10,7 @@ class Play extends StatefulWidget {
 class _PlayState extends State<Play> {
 
   List<String> _lang = ["Japonais", "Anglais", "Chinois", "Italien"];
+  List<String> _cat = ["Nourriture", "Ecole", "Famille", "Cuisine",];
 
   bool isSwitched = false;
   String switchDisplay = "Combien de temps voulez vous jouer ?";
@@ -73,7 +74,7 @@ class _PlayState extends State<Play> {
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: CustomDropdown(
-                    itemList: _lang,
+                    itemList: _cat,
                     hintText: "Sélectionnez une catégorie"
                   ),
                 ),
